@@ -49,15 +49,16 @@ After download, datasets are placed under `PageRank/dataset` and `SpMV/dataset`
 1. PageRank
 ```bash
 cd PageRank
-./pg_test_all.sh
+./pg_test_all.sh $(num_iter) # e.g. ./pg_test_all.sh 1
 ```
 Raw results: `PageRank/results/...`
 Organized results: `PageRank/figures/...`
 
+
 2. SpMV
 ```bash
 cd SpMV
-./spmv_test_all.sh
+./spmv_test_all.sh $(num_iter) # e.g. ./spmv_test_all.sh 1
 ```
 Raw results:
 - `SpMV-OFIS/results/...` (IG-unit, Rank-unit)
@@ -67,6 +68,6 @@ Organized results: `SpMV/figures/...`
 
 3. Run All
 ```bash
-./exp_all.sh
+./exp_all.sh $(num_iter) # e.g.. ./exp_all.sh 1
 ```
 Runs all experiments and generates plots(eps) under `graphs/`
