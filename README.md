@@ -13,7 +13,7 @@ Each application provides multiple implementations to compare OFIS against the U
 - 2-Intel Xeon Gold 6226R CPU
 - 256-GB DRAM, 10-PIM DIMMs
 - Ubuntu 20.04.6 LTS
-- UPMEM SDK ver 2024.2.0
+- UPMEM SDK ver 2024.2.0 (you can install from `https://sdk.upmem.com/2024.2.0/01_Install.html`)
 - **Ensure >= 200 GB of free disk space before running the download.**
 
 ## Files
