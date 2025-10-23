@@ -14,6 +14,7 @@ Each application provides multiple implementations to compare OFIS against the U
 - 256-GB DRAM, 10-PIM DIMMs
 - Ubuntu 20.04.6 LTS
 - UPMEM SDK ver 2024.2.0
+- **Ensure >= 200 GB of free disk space before running the download.**
 
 ## Files
 - sdk/      # Modified SDK for OFIS

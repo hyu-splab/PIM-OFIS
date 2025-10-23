@@ -22,6 +22,7 @@ struct COOMatrix {
     uint32_t nnz;   
     uint32_t *rows; 
     struct elem_t *nnzs;   
+};
 
 /**
  * @brief RBDCSR matrix format 
