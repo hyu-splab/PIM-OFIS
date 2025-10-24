@@ -40,7 +40,6 @@ To use OFIS-api, you must run `load.sh`
 
 ## OFIS-API
 OFIS-APIs are packed in libdpu.so
-```
 - Rank-unit DPU Management
     - `OFIS_get_rank()` returns a virtual DPUset containing only the specified rank.
     - `OFIS_dpu_launch()` boots DPUs in a givnen rank w/o Polling threads
@@ -64,7 +63,6 @@ OFIS-APIs are packed in libdpu.so
     - `OFIS_prepare_xfer_ig()`
     alloc buffers **only** to marked DPUs/IGs
     Then transfer data with standard parallel trasnfer API (`dpu_push_xfer()`)
-```
 By parallelizing the aggregation of interim results and re-transfering data, OFIS can reduce overhead
 
 ## Download Dataset for test
