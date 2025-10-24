@@ -17,7 +17,7 @@ Each application provides multiple implementations to compare OFIS against the U
 - **Ensure >= 200 GB of free disk space before running the download.**
 
 ## Files
-- sdk/      # Modified SDK for OFIS
+- sdk/      # SDK includes OFIS-API
 - SpMV/     # source code for OFIS-enabled spmv
 - PageRank/ # source code for 
 - README.md # readme file for using OFIS code
@@ -37,6 +37,35 @@ ln -sfn libdpu.so.0.0 libdpu.so
 ```
 The `upmem_env.sh` script must be sourced in every new terminal session (or add it to your shell profile) before building or running applications.
 To use OFIS-api, you must run `load.sh`
+
+## OFIS-API
+OFIS-APIs are packed in libdpu.so
+```
+- Rank-unit DPU Management
+    - `OFIS_get_rank()` returns a virtual DPUset containing only the specified rank.
+    - `OFIS_dpu_launch()` boots DPUs in a givnen rank w/o Polling threads
+    - `OFIS_parallel_exec()` create and execute per-rank OFIS threads, in parallel
+- DPU Monitoring
+    - `OFIS_get_finished_dpu()`
+    - `OFIS_get_finished_ig()`
+    - `OFIS_get_finished_rank()`
+    Monitoring DPU state by using direct WRAM access to bypass Job threads and reduce overhead
+- Binary Triggering
+    - `OFIS_set_state_dpu()`
+    - `OFIS_set_state_ig()`
+    - `OFIS_set_state_rank()`
+    set OFIS state value, implemented via direct WRAM access
+- MUX control for M-OFIS
+    - `OFIS_set_mux_ig()`
+    - `OFIS_set_mux_rank()`
+    switch MUX to access MRAM for an IG or Rank-unit
+- Multi-granular Data Transfers
+    - `OFIS_prepare_xfer_dpu()`
+    - `OFIS_prepare_xfer_ig()`
+    alloc buffers **only** to marked DPUs/IGs
+    Then transfer data with standard parallel trasnfer API (`dpu_push_xfer()`)
+```
+By parallelizing the aggregation of interim results and re-transfering data, OFIS can reduce overhead
 
 ## Download Dataset for test
 ```bash
