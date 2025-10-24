@@ -48,19 +48,23 @@ OFIS-APIs are packed in libdpu.so
     - `OFIS_get_finished_dpu()`
     - `OFIS_get_finished_ig()`
     - `OFIS_get_finished_rank()`
+
     Monitoring DPU state by using direct WRAM access to bypass Job threads and reduce overhead
 - Binary Triggering
     - `OFIS_set_state_dpu()`
     - `OFIS_set_state_ig()`
     - `OFIS_set_state_rank()`
+
     set OFIS state value, implemented via direct WRAM access
 - MUX control for M-OFIS
     - `OFIS_set_mux_ig()`
     - `OFIS_set_mux_rank()`
+
     switch MUX to access MRAM for an IG or Rank-unit
 - Multi-granular Data Transfers
     - `OFIS_prepare_xfer_dpu()`
     - `OFIS_prepare_xfer_ig()`
+    
     alloc buffers **only** to marked DPUs/IGs
     Then transfer data with standard parallel trasnfer API (`dpu_push_xfer()`)
 By parallelizing the aggregation of interim results and re-transfering data, OFIS can reduce overhead
