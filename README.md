@@ -74,7 +74,7 @@ By parallelizing the aggregation of interim results and re-transfering data, OFI
 ./download_dataset.sh
 ```
 After download, datasets are placed under `PageRank/dataset` and `SpMV/dataset`
-**Note: Ensure >= 200 GB of free disk space before running the download.**
+**Note: Ensure >= 200 GB of free disk space before downloading.**
 
 ## Experiments (How to Run)
 1. PageRank
