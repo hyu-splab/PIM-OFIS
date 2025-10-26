@@ -34,8 +34,8 @@ libofis, currently integrated with the libdpu.so of the standard UPMEM SDK, prov
 
 # Example Applications
 This repository includes two OFIS-enabled PIM applications to deliver use cases of libofis:
-1. **SpMV** (Sparse Matrix-Vector Multiplication): 
-2. **PR** (Distributed PageRank Computation)
+1. **SpMV** (Sparse Matrix-Vector Multiplication): demonstrates how to use M-OFIS (OFIS with MRAM-based on-the-fly interactions)
+2. **PR** (Distributed PageRank Computation): demonstrates how to use W-OFIS (OFIS with WRAM-based on-the-fly interactions)
    
 Each application provides multiple implementation versions to compare the OFIS-enabled case with OFIS-oblivious cases.
 1. **SpMV**
