@@ -4,7 +4,7 @@ On-the-Fly host-PIM Interaction Scheme (OFIS) that enables PIM applications to u
 **libofis** provides various APIs to facilitate the development of OFIS-enabled applications.
 
 ## APIs for OFIS
-libofis, currently integrated with the libdpu.so in the standard UPMEM SDK, provides various APIs to facilitate the development of OFIS-enabled PIM applications:
+libofis, currently integrated with the libdpu.so of the standard UPMEM SDK, provides various APIs to facilitate the development of OFIS-enabled PIM applications:
 
 - APIs for Rank-unit DPU Management
     - `OFIS_get_rank()` returns a virtual DPUset containing only the specified rank.
@@ -34,7 +34,7 @@ libofis, currently integrated with the libdpu.so in the standard UPMEM SDK, prov
 
 # Example Applications
 This repository includes two OFIS-enabled PIM applications to deliver use cases of libofis:
-1. **SpMV** (Sparse Matrix-Vector Multiplication)
+1. **SpMV** (Sparse Matrix-Vector Multiplication): 
 2. **PR** (Distributed PageRank Computation)
    
 Each application provides multiple implementation versions to compare the OFIS-enabled case with OFIS-oblivious cases.
@@ -52,7 +52,7 @@ Each application provides multiple implementation versions to compare the OFIS-e
 - 256 GB DRAM
 - Ubuntu 20.04.6 LTS
 - UPMEM SDK ver 2024.2.0 (you can install it from `https://sdk.upmem.com/2024.2.0/01_Install.html`)
-- **>= 200 GB of free disk space**
+- **>= 200 GB of free disk space** for datasets
 
 ## Files
 - ofis/      # **ofis.h** and **libofis.so**
@@ -75,7 +75,7 @@ cd $UPMEM_HOME/lib
 ln -sfn libdpu.so.0.0 libdpu.so
 ```
 The `upmem_env.sh` script must be sourced in every new terminal session (or add it to your shell profile) before building or running applications.
-To use OFIS-api, you must run `load.sh`
+To use libofis, you must run `load.sh`
 
 ## Download Dataset for test
 ```bash
@@ -90,8 +90,9 @@ After download, datasets are placed under `PageRank/dataset` and `SpMV/dataset`
 cd PageRank
 ./pg_test_all.sh $(num_iter) # e.g. ./pg_test_all.sh 1
 ```
-Raw results: `PageRank/results/...`
-Organized results: `PageRank/figures/...`
+   Raw results: `PageRank/results/...`
+   
+   Organized results: `PageRank/figures/...`
 
 
 2. SpMV
@@ -103,10 +104,10 @@ Raw results:
 - `SpMV-OFIS/results/...` (IG-unit, Rank-unit)
 - `SparseP-ES/results/...`
 - `SparseP-EW/results/...`
-Organized results: `SpMV/figures/...`
+   Organized results: `SpMV/figures/...`
 
 3. Run All
 ```bash
 ./exp_all.sh $(num_iter) # e.g.. ./exp_all.sh 1
 ```
-Runs all experiments and generates plots(eps) under `graphs/`
+   Runs all experiments and generates plots(eps) under `graphs/`
