@@ -66,14 +66,24 @@ Each application provides multiple implementation versions to compare the OFIS-e
 
 ## Install and Setup libofis
 ```bash
-cd sdk/upmem-2024.2.0-Linux-x86_64/
-source ./upmem_env.sh                                            
-echo $UPMEM_HOME           
-cd $UPMEM_HOME/src/backends # sdk/upmem-2024.2.0-Linux-x86_64/src/backends
-./load.sh                 
+cd ofis/
+cp libofis.so $UPMEM_HOME/lib
+cp ofis.h $UPMEM_HOME/include/dpu
+
 cd $UPMEM_HOME/lib
-ln -sfn libdpu.so.0.0 libdpu.so
+ln -sfn libofis.so libdpu.so
 ```
+Or if you want to modify the OFIS source code,
+you can find it in the ofis-source directory.
+```bash
+cd ofis-source/backends/
+modify code in backends/api/src/api/dpu_memory.c or dpu_runner.c
+./load.sh
+
+cd $UPMEM_HOME/lib
+ln -sfn libofis.so libdpu.so
+```
+
 The `upmem_env.sh` script must be sourced in every new terminal session (or add it to your shell profile) before building or running applications.
 To use libofis, you must run `load.sh`
 
