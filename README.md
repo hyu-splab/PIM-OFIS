@@ -4,7 +4,7 @@ On-the-Fly host-PIM Interaction Scheme (OFIS) that enables PIM applications to u
 **libofis** provides various APIs to facilitate the development of OFIS-enabled applications.
 
 ## APIs for OFIS
-libofis, currently packaged with the libdpu.so in the standard UPMEM SDK, provides various APIs to facilitate the development of OFIS-enabled PIM applications:
+libofis, currently integrated with the libdpu.so in the standard UPMEM SDK, provides various APIs to facilitate the development of OFIS-enabled PIM applications:
 
 - APIs for Rank-unit DPU Management
     - `OFIS_get_rank()` returns a virtual DPUset containing only the specified rank.
@@ -51,19 +51,20 @@ Each application provides multiple implementation versions to compare the OFIS-e
 - Two Intel Xeon Gold 6226R CPUs
 - 256 GB DRAM
 - Ubuntu 20.04.6 LTS
-- UPMEM SDK ver 2024.2.0 (you can install from `https://sdk.upmem.com/2024.2.0/01_Install.html`)
-- **Ensure >= 200 GB of free disk space before running the download.**
+- UPMEM SDK ver 2024.2.0 (you can install it from `https://sdk.upmem.com/2024.2.0/01_Install.html`)
+- **>= 200 GB of free disk space**
 
 ## Files
-- sdk/      # SDK includes OFIS-API
-- SpMV/     # source code for OFIS-enabled spmv
-- PageRank/ # source code for 
-- README.md # readme file for using OFIS code
-- download_dataset.sh
-- exp_all.sh   
-- gnuplot-script.plt
+- ofis/      # **ofis.h** and **libofis.so**
+- ofis-source/    # source code for libofis
+- SpMV/     # source code for SpMV applications (both OFIS-enabled and OFIS-oblivious versions)
+- PageRank/ # source code for PR applications (both OFIS-enabled and OFIS-oblivious versions)
+- README.md # readme file for using OFIS
+- download_dataset.sh    # Script file for downloading datasets for applications
+- exp_all.sh    # Script file for executing all applications
+- gnuplot-script.plt    # Script file for plotting graphs (gnuplot)
 
-## Setup & Build OFIS-enabled SDK
+## Install and Setup libofis
 ```bash
 cd sdk/upmem-2024.2.0-Linux-x86_64/
 source ./upmem_env.sh                                            
