@@ -82,6 +82,7 @@ To use libofis, you must run `load.sh`
 ./download_dataset.sh
 ```
 After download, datasets are placed under `PageRank/dataset` and `SpMV/dataset`
+
 **Note: Ensure >= 200 GB of free disk space before downloading.**
 
 ## Experiments (How to Run)
