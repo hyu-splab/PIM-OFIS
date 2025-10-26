@@ -85,17 +85,7 @@ After download, datasets are placed under `PageRank/dataset` and `SpMV/dataset`
 **Note: Ensure >= 200 GB of free disk space before downloading.**
 
 ## Experiments (How to Run)
-1. PageRank
-```bash
-cd PageRank
-./pg_test_all.sh $(num_iter) # e.g. ./pg_test_all.sh 1
-```
-   Raw results: `PageRank/results/...`
-   
-   Organized results: `PageRank/figures/...`
-
-
-2. SpMV
+1. SpMV
 ```bash
 cd SpMV
 ./spmv_test_all.sh $(num_iter) # e.g. ./spmv_test_all.sh 1
@@ -105,6 +95,15 @@ Raw results:
 - `SparseP-ES/results/...`
 - `SparseP-EW/results/...`
    Organized results: `SpMV/figures/...`
+
+2. PageRank
+```bash
+cd PageRank
+./pg_test_all.sh $(num_iter) # e.g. ./pg_test_all.sh 1
+```
+   Raw results: `PageRank/results/...`
+   
+   Organized results: `PageRank/figures/...`
 
 3. Run All
 ```bash
