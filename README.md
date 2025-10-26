@@ -1,6 +1,7 @@
 # On-the-Fly host-PIM Interaction Scheme (OFIS)
 On-the-Fly host-PIM Interaction Scheme (OFIS) that enables PIM applications to use an on-demand data assignment policy, overcoming the barrier synchronization of the Bulk-Synchronous Parallel (BSP) programming model used in the current commercial PIM system (UPMEM PIM).
-libofis provides various APIs to facilitate the development of OFIS-enabled applications.
+
+**libofis** provides various APIs to facilitate the development of OFIS-enabled applications.
 
 ## APIs for OFIS
 libofis, currently packaged with the libdpu.so in the standard UPMEM SDK, provides various APIs to facilitate the development of OFIS-enabled PIM applications:
