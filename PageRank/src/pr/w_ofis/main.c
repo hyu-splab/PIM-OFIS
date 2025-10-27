@@ -1,6 +1,7 @@
 #include "../../../header/host.h"
 #include "../../../header/common.h"
 
+#include <ofis.h>
 #include <pthread.h>
 
 #define EPSILON 5.96e-8f

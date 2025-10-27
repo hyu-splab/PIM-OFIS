@@ -1,6 +1,7 @@
 #include <assert.h>
 #include <dpu.h>
 #include <dpu_management.h>
+#include <ofis.h>
 
 #include <unistd.h>
 #include <stdio.h>
