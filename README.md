@@ -84,9 +84,6 @@ cd $UPMEM_HOME/lib
 ln -sfn libofis.so libdpu.so
 ```
 
-The `upmem_env.sh` script must be sourced in every new terminal session (or add it to your shell profile) before building or running applications.
-To use libofis, you must run `load.sh`
-
 ## Download Dataset for test
 ```bash
 ./download_dataset.sh
