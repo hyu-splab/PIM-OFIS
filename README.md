@@ -52,11 +52,13 @@ Each application provides multiple implementation versions to compare the OFIS-e
 - 256 GB DRAM
 - Ubuntu 20.04.6 LTS
 - UPMEM SDK ver 2024.2.0 (you can install it from `https://sdk.upmem.com/2024.2.0/01_Install.html`)
+    - If there's any problem, download from sdk/files
 - **>= 200 GB of free disk space** for datasets
 
 ## Files
 - ofis/      # **ofis.h** and **libofis.so**
 - ofis-source/    # source code for libofis
+- sdk/      # upmem sdk v2024.2.0
 - SpMV/     # source code for SpMV applications (both OFIS-enabled and OFIS-oblivious versions)
 - PageRank/ # source code for PR applications (both OFIS-enabled and OFIS-oblivious versions)
 - README.md # readme file for using OFIS
@@ -71,17 +73,27 @@ cp libofis.so $UPMEM_HOME/lib
 cp ofis.h $UPMEM_HOME/include/dpu
 
 cd $UPMEM_HOME/lib
-ln -sfn libofis.so libdpu.so
+ln -sfn libofis.so libdpu.so.0.0
+ln -sfn libdpu.so.0.0 libdpu.so
 ```
 Or if you want to modify the OFIS source code,
 you can find it in the ofis-source directory.
 ```bash
+cp ofis/ofis.h $UPMEM_HOME/include/dpu
 cd ofis-source/backends/
 modify code in backends/api/src/api/dpu_memory.c or dpu_runner.c
 ./load.sh
 
 cd $UPMEM_HOME/lib
-ln -sfn libofis.so libdpu.so
+ln -sfn libofis.so libdpu.so.0.0
+ln -sfn libdpu.so.0.0 libdpu.so
+```
+
+## Setup UPMEM SDK (When use provided files)
+```bash
+cd sdk/files
+tar -zxvf upmem-2024.2.0-Linux-x86_64.tar.gz
+tar -zxvf upmem-src-2024.2.0-Linux-x86_64.tar.gz # option, when modify sdk
 ```
 
 ## Download Dataset for test
