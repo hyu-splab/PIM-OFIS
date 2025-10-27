@@ -20,10 +20,10 @@ set output "graphs/6_1_exe-time-200.eps"
 plot newhistogram, 'SpMV/figures/ofis256-rank-200.txt' u 2:xtic(1) lc rgb "#0000ff" notitle, \
 '' u 3 lc rgb "#ffaaaa" notitle, \
 '' u 4 lc rgb "#ffffff" notitle, \
-newhistogram, 'data/es256-200.txt' u 2:xtic(1) lc rgb "#0000ff" notitle, \
+newhistogram, 'SpMV/figures/es256-200.txt' u 2:xtic(1) lc rgb "#0000ff" notitle, \
 '' u 3 lc rgb "#ffaaaa" notitle, \
 '' u 4 lc rgb "#ffffff" notitle, \
-newhistogram, 'data/ew256-200.txt' u 2:xtic(1) lc rgb "#0000ff" notitle, \
+newhistogram, 'SpMV/figures/ew256-200.txt' u 2:xtic(1) lc rgb "#0000ff" notitle, \
 '' u 3 lc rgb "#ffaaaa" notitle, \
 '' u 4 lc rgb "#ffffff" notitle
 
