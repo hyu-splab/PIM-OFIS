@@ -64,7 +64,7 @@ Each application provides multiple implementation versions to compare the OFIS-e
 - README.md # readme file for using OFIS
 - download_dataset.sh    # Script file for downloading datasets for applications
 - exp_all.sh    # Script file for executing all applications
-- gnuplot-script.plt    # Script file for plotting graphs (gnuplot)
+- gnuplot-script.plt    # Script file for plotting graphs (gnuplot). gnuplot must have been installed in your system.
 
 ## Install and Setup libofis
 ```bash
