@@ -52,7 +52,7 @@ Each application provides multiple implementation versions to compare the OFIS-e
 - 256 GB DRAM
 - Ubuntu 20.04.6 LTS
 - UPMEM SDK ver 2024.2.0 (you can install it from `https://sdk.upmem.com/2024.2.0/01_Install.html`)
-    - If there's any problem, download from sdk/files
+    - If there's any problem, download it from sdk/files directory in this repository
 - **>= 200 GB of free disk space** for datasets
 
 ## Files
